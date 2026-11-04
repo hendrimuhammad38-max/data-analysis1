@@ -6,6 +6,7 @@ Aplikasi web untuk membuat analisis data dari file Excel, lengkap dengan rumus E
 - **Backend:** Google Apps Script sebagai REST API (`Kode.gs` + `Trigger.gs`). File backend tidak disimpan di repository ini.
 
 ## Struktur
+
 ```
 index.html        ← halaman utama (harus berada di root repository)
 css/style.css     ← tampilan "Clean Glass" + mode gelap
@@ -15,12 +16,15 @@ js/trigger.js     ← menu Trigger Otomatis (Admin)
 ```
 
 ## Konfigurasi
+
 Edit `js/config.js`:
+
 ```js
-const GAS_URL = 'https://script.google.com/macros/s/XXXXXXXX/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxggvQHBo2EiCtITNPWcThoWokpxH2tkpmafJwFodJlrBLhvbrGCT5lwIGZWOBPpv9u/exec';
 ```
 
 ## Update situs
+
 ```bash
 git add .
 git commit -m "Deskripsi perubahan"
