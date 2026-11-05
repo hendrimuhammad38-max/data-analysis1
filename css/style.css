@@ -437,3 +437,28 @@ body:not(.is-admin) .admin-only { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ═════════ UPGRADE: Asisten Rumus ═════════ */
+.rm-chips { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.rm-chip { border: 1px solid var(--glass-border); background: var(--glass-strong); color: var(--text); border-radius: var(--r-pill); padding: .25rem .75rem; font-size: .8rem; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.rm-chip:hover { background: var(--primary-soft); color: var(--primary); }
+.rm-saran { border-radius: 18px; padding: 1rem 1.1rem; height: 100%; display: flex; flex-direction: column; }
+.rm-saran.terbaik { border-color: rgba(240,78,35,.45); box-shadow: 0 0 0 .18rem var(--primary-soft); }
+.rm-saran .btn { margin-top: auto !important; }
+.rm-saran code.rm-mini { display: block; margin-bottom: .6rem; }
+.rm-mini { font-size: .78rem; background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; padding: .4rem .6rem; color: var(--text); word-break: break-all; white-space: normal; }
+.rm-catatan { display: flex; gap: .7rem; align-items: flex-start; padding: .8rem 1rem; margin-bottom: 1rem; border-radius: 14px; background: var(--warning-soft); font-size: .88rem; }
+.rm-catatan > i { font-size: 1.1rem; color: #B45309; }
+[data-theme="dark"] .rm-catatan > i { color: #FCD34D; }
+.rm-hasil { display: flex; align-items: center; gap: .6rem; padding: .7rem .7rem .7rem 1rem; border-radius: 14px; background: var(--code-bg); border: 1px solid var(--line); }
+.rm-hasil code { flex: 1; font-size: .98rem; color: var(--text); word-break: break-all; white-space: pre-wrap; }
+.rm-hasil .btn { flex: none; }
+.rm-kolom { width: auto; max-width: 46%; flex: none; font-size: .8rem; }
+.rm-langkah summary { cursor: pointer; font-size: .88rem; font-weight: 500; color: var(--muted); }
+.rm-langkah code { font-size: .8rem; background: var(--code-bg); border-radius: 6px; padding: .05rem .3rem; }
+.rm-kat { font-weight: 600; font-size: .92rem; margin: .4rem 0 .6rem; }
+.rm-item { height: 100%; border-radius: 14px; padding: .75rem .85rem; background: var(--glass-strong); border: 1px solid var(--glass-border); display: flex; flex-direction: column; }
+.rm-item .formula { margin-top: auto; }
+.rm-item .btn { align-self: flex-start; }
+#rmKamusKat { width: auto; min-width: 210px; }
+@media (max-width: 575.98px) { .rm-kolom { max-width: 42%; } .rm-hasil { flex-direction: column; align-items: stretch; } }

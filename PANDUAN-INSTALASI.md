@@ -94,6 +94,21 @@ Tunggu 1–2 menit, lalu tekan **Ctrl+Shift+R** di browser.
 
 ---
 
+## ✨ Upgrade: Asisten Rumus
+Menu baru **Asisten Rumus** untuk semua pengguna:
+- **Ceritakan kebutuhan**, mis. *jumlahkan penjualan wilayah "Jawa" yang statusnya "Lunas"*. Aplikasi menyarankan rumus yang paling cocok dan langsung mengisinya.
+- Tulis teks syarat di dalam **tanda kutip** ("Jawa") atau pakai kata pembanding (*di atas 75*, *minimal 70*) agar terisi otomatis.
+- Bila file sudah dibuka di **Analisis Baru**, nama kolom yang disebut di deskripsi otomatis menjadi alamat kolom (mis. Penjualan → C2:C101).
+- **Perakit rumus**: ubah isian, lalu rumus jadi diperbarui seketika dan siap disalin. Pemisah `;` / `,` bisa diganti.
+- **Kamus Rumus Excel**: 188 rumus dalam 10 kategori, termasuk 32 resep kombinasi siap pakai, lengkap dengan contoh dan tanda versi Excel yang dibutuhkan.
+
+Fitur ini berjalan sepenuhnya di browser. **Backend Apps Script tidak perlu diubah atau di-deploy ulang.** Cukup push frontend:
+```
+git add .
+git commit -m "Tambah Asisten Rumus"
+git push
+```
+
 ## 🛠️ Pemecahan Masalah
 
 | Gejala | Penyebab & solusi |

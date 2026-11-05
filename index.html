@@ -76,6 +76,7 @@
         <li><a href="#" class="nav-link" data-section="beranda"><i class="bi bi-house"></i><span>Beranda</span></a></li>
         <li><a href="#" class="nav-link" data-section="analisis"><i class="bi bi-cloud-arrow-up"></i><span>Analisis Baru</span></a></li>
         <li><a href="#" class="nav-link" data-section="riwayat"><i class="bi bi-clock-history"></i><span id="navRiwayatLabel">Riwayat</span></a></li>
+        <li><a href="#" class="nav-link" data-section="rumus"><i class="bi bi-magic"></i><span>Asisten Rumus</span></a></li><!-- UPGRADE: Asisten Rumus -->
         <li class="admin-only nav-group">Admin</li>
         <li class="admin-only"><a href="#" class="nav-link" data-section="jenis"><i class="bi bi-sliders"></i><span>Jenis Analisis & Rumus</span></a></li>
         <li class="admin-only"><a href="#" class="nav-link" data-section="pengguna"><i class="bi bi-people"></i><span>Kelola Pengguna</span></a></li>
@@ -464,6 +465,49 @@
         </div>
       </section>
 
+      <!-- ───────── UPGRADE: ASISTEN RUMUS ───────── -->
+      <section id="section-rumus" class="content-section">
+        <div class="page-head">
+          <div>
+            <h2 class="page-title">Asisten Rumus</h2>
+            <p class="text-muted-2 mb-0">Tulis kebutuhan Anda dengan bahasa sehari-hari, lalu pilih rumus Excel yang disarankan. Bisa juga menelusuri kamus rumus lengkap.</p>
+          </div>
+        </div>
+
+        <div class="glass card-glass mb-3">
+          <label class="form-label fw-semibold" for="rmDeskripsi"><i class="bi bi-chat-text me-1"></i> Apa yang ingin Anda hitung?</label>
+          <textarea id="rmDeskripsi" class="form-control textarea-glass" rows="3" maxlength="500" placeholder="Contoh: jumlahkan penjualan untuk wilayah &quot;Jawa&quot; yang statusnya &quot;Lunas&quot;"></textarea>
+          <div class="rm-chips mt-2">
+            <span class="small text-muted-2 me-1">Contoh:</span>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">jumlahkan penjualan wilayah "Jawa"</button>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">hitung berapa yang nilainya di atas 75</button>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">ambil harga dari tabel produk berdasarkan kode</button>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">tandai data yang duplikat</button>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">hitung umur dari tanggal lahir</button>
+            <button type="button" class="rm-chip" onclick="rmContoh(this.textContent)">persentase kenaikan dari bulan lalu</button>
+          </div>
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-3">
+            <div class="small text-muted-2" id="rmInfoFile"></div>
+            <button class="btn btn-glass-primary" onclick="rmCari()"><i class="bi bi-stars me-1"></i> Carikan Rumus</button>
+          </div>
+        </div>
+
+        <div id="rmSaran" class="mb-3"></div>
+        <div id="rmPerakit" class="mb-3"></div>
+
+        <div class="glass card-glass">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <h6 class="fw-semibold mb-0"><i class="bi bi-book me-1"></i> Kamus Rumus Excel</h6>
+            <span class="small text-muted-2" id="rmKamusJumlah"></span>
+          </div>
+          <div class="filter-bar mb-3">
+            <div class="input-glass flex-grow-1"><i class="bi bi-search"></i><input type="search" id="rmKamusCari" class="form-control" placeholder="Cari nama rumus atau kegunaannya, mis. tanggal, VLOOKUP, gabung..."></div>
+            <select id="rmKamusKat" class="form-select select-glass"></select>
+          </div>
+          <div id="rmKamusList"></div>
+        </div>
+      </section>
+
       <!-- ═════════════ UPGRADE: TRIGGER OTOMATIS (khusus Admin) ═════════════ -->
       <section id="section-trigger" class="content-section">
         <div class="page-head">
@@ -667,5 +711,7 @@
   <script src="js/config.js"></script>
   <script src="js/app.js"></script>
   <script src="js/trigger.js"></script>
+  <script src="js/rumus-data.js"></script><!-- UPGRADE: Asisten Rumus -->
+  <script src="js/rumus.js"></script><!-- UPGRADE: Asisten Rumus -->
 </body>
 </html>
